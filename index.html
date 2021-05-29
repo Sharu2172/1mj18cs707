@@ -1,12 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>This is a Heading</h1>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://www.dropbox.com/s/95uw0bdmnsbt635/iconfinder_csgo_squircle_4737387.png?raw=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
+  <title>Assignment 3</title>
+  <link href="https://www.dropbox.com/s/uuhipxewr5g1uaj/Assignment3.css?raw=1" rel="stylesheet" />
+  <style>
+    @media (max-width: 400px) {
+      .carousel-item>img {
+        max-height: 200px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .carousel-item>img {
+        max-height: 300px;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .carousel-item>img {
+        max-height: 400px;
+      }
+    }
+
+    @media (max-width: 1300px) {
+      .carousel-item>img {
+        max-height: 500px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Programmers</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#evolution">Evolution</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Designers
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="#minh"> Minh Le </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#jess">Jess Cliffe</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#james">James Ohelen</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="richard">Richard Gray</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://counterstrike.fandom.com/wiki/Level_designers">Level
+                  Designers</a>
+              </li>
+            </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#history">History</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+
+    <h1 id="home" class="heading">Landing Page Website</h1>
+    <div class="h-50 mw-100 p-3 align-content-center">
+      <div id="wallpaperchange" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#wallpaperchange" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#wallpaperchange" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#wallpaperchange" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://www.dropbox.com/s/n4zrsoo09zanxf3/cs1.jpg?raw=1" height="50%" class="full d-block w-100" alt="Counter Strike" />
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.dropbox.com/s/pagydghyc8zbva9/cs2.jpg?raw=1" class="full d-block w-100" alt="Counter Strkie" />
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.dropbox.com/s/6nj7of9dkd0cs2a/cs3.jpg?raw=1" class="full d-block w-100" alt="Counter Strike" />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#wallpaperchange" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#wallpaperchange" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm col-lg text-right">
+          <p class=" lh-base text-left">
+            <strong>Global Offensive (CS:GO)</strong> is a multiplayer first-person shooter developed by Valve and
+            Hidden Path Entertainment. It is the fourth game in the Counter-Strike series. Developed for over two years,
+            Global Offensive was released for Windows, macOS, Xbox 360, and PlayStation 3 in August 2012, and for Linux
+            in 2014.
+            Valve still regularly updates the game, both with smaller balancing patches and larger content additions.
+          </p>
+        </div>
+        <div class="row-sm col-lg text-left">
+          <p class=" lh-base text-justify">
+            The game pits two teams, <em>Terrorists</em> and <em>Counter-Terrorists</em>, against each other in
+            different objective-based game modes.The most common game modes involve the Terrorists planting a bomb while
+            Counter-Terrorists attempt to stop them, or Counter-Terrorists attempting to rescue hostages that the
+            Terrorists have captured.
+            <br>
+            There are eight official game modes, all of which have distinct characteristics specific to that mode. The
+            game also has matchmaking support that allows players to play on dedicated Valve servers, in addition to
+            community-hosted servers with custom maps and game modes. A battle-royale game-mode, "Danger Zone", was
+            introduced in December 2018.
+          </p>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm col-lg text-right">
+          <p class=" lh-base text-justify">
+            Global Offensive received positive reviews from critics on release, who praised the game for its gameplay
+            and faithfulness to the Counter-Strike series, though it was criticized for some early features and the
+            differences between the console and PC versions.
+            Since its release, it has drawn in an estimated 11 million players per month, and remains one of the most
+            played games on Valve's Steam platform.
+            In December 2018, Valve transitioned the game to a free-to-play model, focusing on revenue from cosmetic
+            items.
+          </p>
+        </div>
+        <div class="row-sm col-lg text-left">
+          <p class=" lh-base text-justify">
+            The game has an active esports scene, continuing the history of international competitive play from previous
+            games in the series. Teams compete in professional leagues and tournaments, and Global Offensive is now one
+            of the largest global esports.
+          </p>
+        </div>
+      </div>
+
+      <hr>
+      <div id="evolution" class="container marketing">
+        <h3><u>Evolutions of COUNTER STRIKE</u></h3>
+        <br>
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h3 class="featurette-heading">The First Half-Life Mod</h3>
+            <p class="lead cs">The game started as a mod for Half-Life designed by Jess “Cliffe” Cliffe and Minh
+              “Gooseman” Le. Valve bought the rights for the mod after that, and the rest is history. Valve, the
+              creators of Half-Life, published Counter Strike in 2000, over 20 years ago.Let that sink in for a
+              moment.<br>A game that’s 20 years old but still around competing with the biggest names in the gaming
+              industry. Back in the days, Counter Strike brought some fresh ideas and revolutionized the whole FPS
+              genre. After that, nothing would ever be the same.<br>Others learned from Valve, and thus the FPS genre
+              was never the same again. </p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="https://www.dropbox.com/s/ul3m51qgliv9p3b/cs-half-life.jpeg?raw=1" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">The Failure of Counter-Strike: Condition Zero</h2>
+            <p class="lead cs">Condition Zero brought some new features into the game like BOT’s and single-player
+              missions but was never a giant leap from the previous version like everybody expected. The main reason for
+              the failure was that the game had multiple bugs and often crashed while in the match.<br>The hype
+              surrounding the game was huge. The players expected something better from a title that was popular but got
+              disappointed with a result. It seems like the developers rushed to make a game to meet the
+              deadlines.Condition Zero was later used as an example of what mistakes should get avoided in the next
+              titles.<br></p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="https://www.dropbox.com/s/st4t5c2natd4o3y/cs-zero.jpeg?raw=1" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Counter-Strike: Source Brings Counter Strike Back on Track</h2>
+            <p class="lead cs">Not so long after, Valve published Source following the failure of Condition Zero. With
+              all that they’d learned in the previous release, Source delivered on the promises and brought something
+              new to the table.<br>After the previous title’s failure, the players were doubtful whether Valve could
+              repeat the first game’s success. Luckily, Valve created a game that’s described as one of the best titles
+              in the whole franchise.<br>Some players play Source even today, and there are still servers with the
+              hardcore fans. We are still grateful that this game put the franchise back on its feet and helped them to
+              continue the good work.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="https://www.dropbox.com/s/h49pei51hfiuife/csgo.jpeg?raw=1" alt="Generic placeholder image">
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">CS:GO Modernizes Counter-Strike</h2>
+            <p class="lead cs">The latest title in the franchise, Global Offensive, took the game into the 21st century.
+              GO was one of the most expected games in the gaming community, with many hardcore fans waiting for the
+              chance of playing it once more.<br>In the beginning, GO had many issues and bugs, which developers had to
+              address if the game would have any chance of competing with AAA titles. It took some time, but in the end,
+              we got a game that is one of the most competitive FPS on the market today.<br>With the old-school player
+              base besides the young generations, Counter Strike is once again at the top of its fame.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="https://www.dropbox.com/s/lcs7x3ops0xlbbi/css.jpeg?raw=1" alt="Generic placeholder image">
+          </div>
+        </div>
+
+      </div>
+      <hr class="featurette-divider">
+      <div class="container marketing">
+        <div class="row">
+          <h3><u>Designers</u></h3>
+          <br><br><br>
+          <div id="minh" class="col-lg-6">
+            <img class="rounded-circle" src="https://www.dropbox.com/s/b58pm3qp49k8d46/minh_le.jpg?raw=1" alt="Minh Le" width="140" height="140">
+            <h2>Minh Le</h2>
+            <p>Minh Le also known by his online nickname Gooseman, is a Vietnamese Canadian video game programmer who
+              co-created the Half-Life mod Counter-Strike with Jess Cliffe in 1999 and started the Counter-Strike
+              series.</p>
+            <p><a class="btn btn-secondary" href="https://en.wikipedia.org/wiki/Minh_Le" role="button">View details
+                &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div id="jess" class="col-lg-6">
+            <img class="rounded-circle" src="https://www.dropbox.com/s/bkpb8se9xh2ev4x/Jess.png?raw=1" alt="Jess Cliffe" width="140" height="140">
+            <h2>Jess Cliffe</h2>
+            <p>Jess A. Cliffe (born June 27, 1981) is a video game designer who co-created the Half-Life mod
+              Counter-Strike with Minh Le and started the Counter-Strike series. He is also the "voice of
+              Counter-Strike" via the radio commands, the voiceline "Counter-Terrorists Win!"[1] and sound effects. He
+              has worked on maps for Half-Life: Deathmatch.</p>
+            <p><a class="btn btn-secondary" href="https://en.wikipedia.org/wiki/Jess_Cliffe" role="button">View details
+                &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div id="james" class="col-lg-6">
+            <img class="rounded-circle" src="https://www.dropbox.com/s/ciwshrpn9cmxqdf/james.jpeg?raw=1" alt="James Ohlen" width="140" height="140">
+            <h2>James Ohlen</h2>
+            <p>James Ohlen is a video game designer. He was Senior Creative Director of BioWare where he worked for 22
+              years prior to starting the publishing company Arcanum Worlds in 2018. In 2019, Ohlen became the lead of a
+              new internal development studio Archetype Entertainment under Wizards of the Coast to develop new
+              intellectual property and video games for the company.</p>
+            <p><a class="btn btn-secondary" href="https://en.wikipedia.org/wiki/James_Ohlen" role="button">View details
+                &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div id="richard" class="col-lg-6">
+            <img class="rounded-circle" src="https://www.dropbox.com/s/x4f2gofh4gq170h/richard.jpeg?raw=1" alt="Richard Gray (game designer)" width="140" height="140">
+            <h2>Richard Gray (game designer)</h2>
+            <p>Richard "The Levelord" Gray is a video game designer who is best known for designing levels for 3D video
+              games. His most famous works are perhaps the levels for Duke Nukem 3D and SiN. </p>
+            <p><a class="btn btn-secondary" href="https://en.wikipedia.org/wiki/Richard_Gray_(game_designer)"
+                role="button">View details &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+        <hr class="featurette-divider">
+
+        <div id="history" class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">History of Counter Strike</h2>
+            <p>Like so many great games before it Counter-Strike was originally made as a mod.<br>League of Legends was
+              created as a spin-off to DotA Allstars, DotA Allstars as a mod from Warcraft 3, and Counter-Strike was
+              originally a mod from the legendary Half-Life back in 1999.<br>The classic gameplay and mechanics was to
+              define an entire genre, but no one knew this initially.<br>Three iterations later and Counter-Strike is
+              almost synonym with competitive gaming.</p>
+          </div>
+          <div class="col-md-5">
+            <div class="embed-responsive">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sdBjDSczgKY"
+                title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <div id="contact" class="row featurette">
+          <h2 class="featurette-heading">Contact Form</h2>
+          <div class="col-md-5">
+            <div class="align-middle">
+              <p>You can contact us through this form for any sugesstions or improvements.</p>
+              <img src="https://www.dropbox.com/s/95uw0bdmnsbt635/iconfinder_csgo_squircle_4737387.png?raw=1" alt="Counter Strike">
+              <p>We will try our best to solve your problems or improve performance.</p>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-12">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+                <div class="invalid-feedback">
+                  Check Name.
+                </div>
+              </div>
+              <div class="col-md-12">
+                <label for="email" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">@</span>
+                  <input type="email" class="form-control" id="email" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Please choose a email.
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option value="India">India</option>
+                  <option value="America">America</option>
+                  <option value="Austria">Austria</option>
+                  <option value="London">London</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid state.
+                </div>
+              </div>
+              <div class="col-md-12">
+                <label for="comment" class="form-label">Comment</label>
+                <textarea class="form-control" name="comment" id="comment" rows="2"></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <footer class="container">
+      <p class="float-right"><a href="#home">Back to top</a></p>
+      <p>Developed By D.Sharath 1MJ18CS707 MVJ College Of Engineering</p>
+    </footer>
+    </main>
+  </div>
+  <script type="text/javascript">
+    (function () {
+      'use strict'
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+          }, false)
+        });
+    })()
+    $(document).ready(function () {
+        $("form").submit(function (event) {
+         
+          event.preventDefault();
+        });
+      });
+
+  </script>
+</body>
+
 </html>
