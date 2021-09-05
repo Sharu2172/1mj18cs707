@@ -41,7 +41,9 @@ if (empty($_FILES['admin_image']['tmp_name']) || !is_uploaded_file($_FILES['admi
         $log = 1;
     }
     move_uploaded_file($_FILES["admin_image"]["tmp_name"], "../upload/" . $admin_image);
-    if(!empty($olddata['admin_image'])){unlink('../upload/'.$olddata['admin_image']);}
+    if (!empty($olddata['admin_image'])) {
+        unlink('../upload/' . $olddata['admin_image']);
+    }
 }
 
 //to check if Query is Run sucessfully
@@ -53,6 +55,6 @@ if ($conn->query($query)) {
     echo location("../dashboard/");
 } else {
     echo "<script type='text/javascript'>alert('Cannot Add Admin data.');</script>";
-    echo location("../admin/");
+    echo location("../");
 }
 ?>

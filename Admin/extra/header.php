@@ -1,11 +1,13 @@
 <!-- File to add header style and function to multipe pages with preset navigation bar. -->
 <?php
 include('../../dbcon.php');
+Access();
 ?>
 <!doctype html>
 <html lang="en">
 
 <!-- Header tag to include all stylesheet and javascript files -->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -18,10 +20,10 @@ include('../../dbcon.php');
   <!-- Bootstrap core CSS -->
   <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
   <script src="../../assets/js/bootstrap1.min.js"></script>
-  <script src="../../assets/dist/js/popper.min.js"></script>
-  <script src="../../assets/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../../assets/dist/js/jquery-3.5.1.min.js"></script>
-  <script src="../../assets/dist/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/popper.min.js"></script>
+  <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/jquery-3.5.1.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
   <script src="../../assets/js/cities.js"></script>
   <style>
     .bd-placeholder-img {
@@ -53,11 +55,12 @@ include('../../dbcon.php');
 </head>
 
 <!-- Body tag to have navigation file and data structure. -->
+
 <body onClose="sessionClose()">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="../admin/"><?php echo $_SESSION['uname']; ?></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="../admin/"><?php echo $_SESSION['uname']; ?></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="flase" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -66,18 +69,18 @@ include('../../dbcon.php');
           <li class="nav-item active">
             <a class="btn nav-link" aria-current="page" href="../dashboard/">Home</a>
           </li>
-            <li class="nav-item">
-              <form action="../add-Student/" method="post">
-                <button type="submit" class="btn nav-link">
-                  Add Student
-                </button>
-              </form>
-            </li>
-            <li class="nav-item">
-              <button type="button" class="btn nav-link" data-toggle="modal" data-target="#Logout">
-                Logout
+          <li class="nav-item align-content-center">
+            <form action="../add-Student/" method="post">
+              <button type="submit" class="btn nav-link">
+                Add Student
               </button>
-            </li>
+            </form>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn nav-link" data-toggle="modal" data-target="#Logout">
+              Logout
+            </button>
+          </li>
         </ul>
         <form class="d-flex" action="../search-student/index.php" method="POST">
           <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">

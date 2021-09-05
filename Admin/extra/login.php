@@ -6,9 +6,9 @@ $user = $_POST['user'];
 //to get password in encrypted form.
 $pass = encryptPass($_POST['passwd']);
 //Empty the $_POST array.
-$_POST=array();
+$_POST = array();
 //Query to check if username and password is present in database.
-$qry = "SELECT * FROM Admin WHERE username='$user' and password='$pass'";
+$qry = "SELECT * FROM admin WHERE username='$user' and password='$pass'";
 $query_run = mysqli_query($conn, $qry);
 $row = mysqli_fetch_assoc($query_run);
 if ($row) {
@@ -21,6 +21,6 @@ if ($row) {
     echo location("../dashboard/");
 } else {
     echo "<script type='text/javascript'>alert('username or passoword invalid');</script>";
-    echo location("../../");
+    echo location("../");
 }
 ?>

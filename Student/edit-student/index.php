@@ -13,7 +13,7 @@ $query = "SELECT * FROM stud_details s JOIN personal_details p on s.USN=p.USN JO
 $query_run = mysqli_query($conn, $query);
 while ($row = mysqli_fetch_assoc($query_run)) {
 ?>
-<!-- This fields is used to diaplay data and edit them and send them to edit_student.php . -->
+    <!-- This fields is used to diaplay data and edit them and send them to edit_student.php . -->
     <main class="col-md-auto ms-sm-auto col-lg-auto px-md-15 justify-content-center">
         <center>
             <div class="container">
@@ -95,7 +95,6 @@ while ($row = mysqli_fetch_assoc($query_run)) {
                             <input type="password" class="form-control" id="np" name="npass">
                         </div>
                     </div>
-                    <input type="checkbox" onclick="myFunction('np')">  Show Password
                     <br>
                     <div class="form-group row">
                         <label for="cnp" class="col-sm-5 col-form-label"><b>Confirm New Password : </b></label>
@@ -103,7 +102,7 @@ while ($row = mysqli_fetch_assoc($query_run)) {
                             <input type="password" class="form-control" id="cnp" name="cnpass">
                         </div>
                     </div>
-                    <input type="checkbox" onclick="myFunction('cnp')">  Show Password
+                    <input type="checkbox" onclick="myFunction('cnp')"> Show Password
                     <br>
                     <h3><b><u>Personal Detail</u></b></h3>
                     <br>
@@ -1024,13 +1023,15 @@ while ($row = mysqli_fetch_assoc($query_run)) {
 <?php }
 include("../extra/footer.php"); ?>
 <script>
-function myFunction(func) {
-  var passid = func.toString();
-  var x = document.getElementById(passid);
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
+    function myFunction() {
+        var np = document.getElementById('np');
+        var cnp = document.getElementById('cnp');
+        if (np.type === "password" && cnp.type == "password") {
+            np.type = "text";
+            cnp.type = "text";
+        } else {
+            np.type = "password";
+            cnp.type = "password";
+        }
+    }
 </script>

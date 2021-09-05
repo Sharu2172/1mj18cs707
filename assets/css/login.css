@@ -27,7 +27,7 @@ body {
 
 .wrapper .card {
   max-width: 400px;
-  min-height: 350px;
+  min-height: 270px;
   margin: 30px;
   background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
