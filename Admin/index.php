@@ -18,7 +18,7 @@ include('../dbcon.php');
 	<!-- Bootstrap core CSS -->
 	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 	<script src="../assets/js/bootstrap.bundle.min.js"></script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="../assets/css/login.css">
 </head>
 
@@ -28,14 +28,14 @@ include('../dbcon.php');
 			<form action="extra/login.php" method="POST" class="d-flex flex-column">
 				<div class="h3 text-center text-white"><u>Admin Login</u></div>
 				<div class="d-flex align-items-center input-field my-3 mb-4">
-					<span class="far fa-user p-2"></span>
+					<span class="bi-person-fill p-2"></span>
 					<input type="text" placeholder="UserName" name="user" required class="form-control">
 				</div>
 				<div class="d-flex align-items-center input-field mb-4">
-					<span class="fas fa-lock p-2"></span>
+					<span class="bi-key-fill p-2"></span>
 					<input type="password" placeholder="Password" name="passwd" required class="form-control" id="pwd">
-					<button class="btn" onclick="showPassword()">
-						<span class="fas fa-eye-slash"></span>
+					<button class="btn" id="eye">
+						<span class="bi-eye-slash"></span>
 					</button>
 				</div>
 				<div class="d-sm-flex align-items-sm-center justify-content-sm-between">
@@ -45,14 +45,14 @@ include('../dbcon.php');
 			</form>
 		</div>
 		<script>
-			function showPassword() {
-				var password = document.getElementById('pwd');
-				if (password.type === 'password') {
-					password.type = "text";
-				} else {
-					password.type = "password";
-				}
-			}
+			const togglePassword = document.querySelector('#eye');
+			const password = document.querySelector('#pwd');
+			togglePassword.addEventListener('click', function(e) {
+				e.preventDefault();
+				// toggle the type attribute
+				const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+				password.setAttribute('type', type);
+			});
 		</script>
 </body>
 

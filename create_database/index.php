@@ -3,18 +3,18 @@
 include("../config.php");
 include("../Session.php");
 //Using data from config.php to connect to database
-$conn = mysqli_connect($host,$user,$pass,$name);//host_name,username,password,Database_name
+$conn = mysqli_connect($host, $user, $pass, $name); //host_name,username,password,Database_name
 //check connection
 if (!$conn) {
-    echo "connection failed: " . mysqli_connect_error()."<br>";
-    if(mysqli_connect_errno() == 1049){
-      echo "Creating";
-      $data = "CREATE DATABASE 1mj18cs707";
-      $conn = mysqli_connect($host,$user,$pass);
-      $conn->query($data);
-      $conn->close();
-      echo location("../sql_queries/");
-    }
+  echo "connection failed: " . mysqli_connect_error() . "<br>";
+  if (mysqli_connect_errno() == 1007) {
+    echo "Creating";
+    $data = "CREATE DATABASE 1mj18cs707";
+    $conn = mysqli_connect($host, $user, $pass);
+    $conn->query($data);
+    $conn->close();
+    echo location("../sql_queries/");
+  }
 }
 
 $sql = array();
@@ -111,10 +111,4 @@ foreach ($sql as $query) {
   $conn->multi_query($query);
 }
 
-$out = '
-   <form method="POST" id="form_id" action="../index.php"></form>
-   <script type="text/javascript">
-	   document.forms[\'form_id\'].submit();
-   </script>
-   ';
-echo $out;
+echo location("../index.php");

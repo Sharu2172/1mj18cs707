@@ -1,5 +1,5 @@
 <?php
 $host = "localhost";
-$name = "SDMS";
+$name = "sdms";
 $user = "root";
 $pass = "";
